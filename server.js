@@ -1,5 +1,7 @@
+//git add . ; git commit -am 'Texto'
 const express = require("express");
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
 
 //Link from api
 const users = require("./routes/api/users");
@@ -9,6 +11,9 @@ const posts = require("./routes/api/posts");
 //Init app
 const app = express();
 
+//Bodyparser middleware
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 //DB config
 const db = require("./config/keys").mongoURI;
 
