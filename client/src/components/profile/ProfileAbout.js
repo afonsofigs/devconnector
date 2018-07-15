@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-class ProfileGithub extends Component {
+class ProfileAbout extends Component {
   render() {
     return (
       <div>
-        <h1>PROFILE Github</h1>
+        <h1>PROFILE ABOUT</h1>
       </div>
     );
   }
 }
 
-export default ProfileGithub;
+export default ProfileAbout;
