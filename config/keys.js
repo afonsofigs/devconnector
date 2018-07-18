@@ -1,5 +1,5 @@
-//Connect to mongoDB on mLab
-module.exports = {
-  mongoURI: "mongodb://afonso1:afonso1@ds119685.mlab.com:19685/devconnector",
-  secretOrKey: "secret"
-};
+if (process.env.NODE_ENV === "production") {
+  module.exports = require("./keys_prod");
+} else {
+  module.exports = require("./keys_dev");
+}
